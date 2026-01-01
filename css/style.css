@@ -89,13 +89,28 @@ header nav ul li a:hover{
     text-align: center;
     background-color: #374151;
     width: 100%;
+    max-width: 100%;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.home-text {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word; /* breaks long words */
+    box-sizing: border-box;
 }
 
 .home-text p{
     font-size: 2rem;
     color: #fffdd0;
     margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .home-text p {
+        font-size: 1.5rem; /* smaller on phones */
+    }
 }
 
 
