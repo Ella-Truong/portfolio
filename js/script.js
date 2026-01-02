@@ -1,36 +1,11 @@
-const typingElement = document.querySelector('.typing');
-const homeDesc = document.querySelector('.home-desc');
+//toggle dropdown
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav-links');
 
-const text = "Hello, I'm ";
-const name = "Ella Truong..."; // name in pink and bigger
-let index = 0;
-let nameIndex = 0;
-
-function typeIntro() {
-  // Type "Hello, I'm "
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeIntro, 150);
-  } else {
-    // Type the name in a span
-    if (nameIndex === 0) {
-      typingElement.innerHTML += '<span class="highlight"></span>';
-    }
-    if (nameIndex < name.length) {
-      const span = typingElement.querySelector('.highlight');
-      span.textContent += name.charAt(nameIndex);
-      nameIndex++;
-      setTimeout(typeIntro, 150);
-    } else {
-      // Typing finished, show description
-      homeDesc.style.transition = "opacity 0.5s";
-      homeDesc.style.opacity = 1;
-    }
-  }
-}
-
-typeIntro();
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');  // toggle dropdown
+    toggle.classList.toggle('open'); // hamburger → X
+});
 
 
 
