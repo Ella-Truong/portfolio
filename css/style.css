@@ -247,10 +247,11 @@ header nav ul li a:hover{
 }
 
 @media (max-width: 600px) {
-    .home-section{
-        padding-top: 5rem;
+      .home-section {
+        padding-top: 4rem; /* push entire section below mobile navbar */
+        padding-bottom: 4rem;
     }
-    
+
     .home-text .hello {
         font-size: 1.4rem;
         line-height: 1.2rem;
@@ -265,7 +266,7 @@ header nav ul li a:hover{
     .home-text .home-desc {
         font-size: 1rem;
         word-spacing: 0.05em;
-        padding: 0 1.5rem;      /* avoid touching edges */
+        padding: 0 2rem;      /* avoid touching edges */
         max-width: 100%;
         box-sizing: border-box;
         line-height: 1.5;
