@@ -756,6 +756,7 @@ header nav ul li a:hover{
     align-items: center;
     padding-bottom: 15rem;
     padding-top: 5rem;
+    border: none;
 }
 
 .contact-header {
