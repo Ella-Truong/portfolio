@@ -204,6 +204,46 @@ header nav ul li a:hover{
    
 }
 
+.home-section .home-text img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media (min-width: 769px) {
+    .home-section .home-text img {
+        animation: logoPulse 3s infinite;
+    }
+
+    /* Hover effect */
+    .home-section .home-text img:hover {
+        animation: none; /* stop default pulse */
+        transform: scale(1.15) rotate(10deg); /* slightly bigger and rotated */
+        box-shadow: 0 0 25px rgba(178, 74, 134, 0.8); /* stronger glow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+/* Keyframes for subtle pulse animation */
+@keyframes logoPulse {
+    0% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 5px rgba(178, 74, 134, 0.3);
+    }
+    50% {
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 0 0 15px rgba(178, 74, 134, 0.5);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 5px rgba(178, 74, 134, 0.3);
+    }
+}
+
 
 .home-text .hello{
     font-size: 2rem;
