@@ -23,11 +23,10 @@ section {
 /* Header styling */
 header {
     width: 100%;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(145deg, #374151, #2f3b4a);
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #111827 0%, #7a2f5d 60%, #b24a86 80%);
     color: #fffdd0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 253, 208, 0.5);
     box-shadow: 0 8px 20px rgba(178, 74, 134, 0.4), 0 2px 6px rgba(0,0,0,0.1);
     backdrop-filter: blur(4px);
     position: static;
@@ -40,7 +39,6 @@ header {
 
 header:hover {
     box-shadow: 0 10px 30px rgba(178, 74, 134, 0.5), 0 4px 10px rgba(0,0,0,0.15);
-    background: linear-gradient(145deg, #3f4a5b, #374151);
 }
 
 /* Navbar container */
@@ -113,8 +111,6 @@ header nav ul li a {
 }
 
 header nav ul li a:hover{
-    color: #b24a86;
-    transform: scale(1.05);
     text-shadow: 0 0 10px #f472b6;
     font-weight: bold;
 }
@@ -198,7 +194,7 @@ header nav ul li a:hover{
     gap: 2.5rem;
     justify-content: center;
     text-align: center;
-    background-color: #374151;
+    background-color: #111827;
     width: 100%;
     max-width: 100%;
    
@@ -398,7 +394,7 @@ header nav ul li a:hover{
     padding: 3rem 4rem 6rem 4rem;
     width: 100%;
     margin: 0 auto;
-    background-color:#4a505f;
+    background-color:#121a2e;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
@@ -517,7 +513,7 @@ header nav ul li a:hover{
 #work {
     width: 100%;
     padding: 3.2rem ;
-    background:#4a505f;
+    background:#121a2e;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -565,7 +561,8 @@ header nav ul li a:hover{
     transition: transform 0.3s, box-shadow 0.3s;
     border: 2px solid #fffdd0;
     border-radius: 1rem;
-    overflow: hidden
+    overflow: hidden;
+    background: #374151;
 }
 
 .tech-grid > div:hover {
@@ -588,7 +585,7 @@ header nav ul li a:hover{
 
 .tech-grid h3 {
     color: #fffdd0;
-    background: #4b5563;
+    background: transparent;
     backdrop-filter: blur(14px);
     box-shadow: 0 8px 24px #b24a86, 0 2px 6px rgba(0,0,0,0.08);
     padding: 0.25rem 1rem;
@@ -634,7 +631,7 @@ header nav ul li a:hover{
 #projects {
     padding: 3rem;
     padding-bottom: 12rem;
-    background-color:#4a505f;
+    background-color:#111827;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     margin: 0;
     width: 100%;
@@ -789,14 +786,14 @@ header nav ul li a:hover{
 /*----------------------------------------------- CONTACT section --------------------------------------------*/
 #contact {
     margin: 0;
-    background:#374151;
+    background:#121a2e;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 15rem;
     padding-top: 5rem;
-    border: none;
+    border-bottom: none;
 }
 
 .contact-header {
