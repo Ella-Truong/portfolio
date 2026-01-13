@@ -200,7 +200,7 @@ header nav ul li a:hover{
     width: 100%;
     max-width: 100%;
 
-    background-image: url('/images/home.gif');
+    background-image: url('../images/home.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
