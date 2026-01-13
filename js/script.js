@@ -8,6 +8,64 @@ toggle.addEventListener('click', () => {
 });
 
 
+//typing text
+const phrases = [
+  "cs student @ csulb",
+  "coffee lover ☕",
+  "full-stack developer",
+  "tech enthusiast 💻",
+];
+
+const typedElement = document.getElementById("typed");
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100; // ms per character
+
+function type() {
+  const currentPhrase = phrases[phraseIndex];
+
+  if (isDeleting) {
+    charIndex--;
+    typedElement.textContent = currentPhrase.substring(0, charIndex);
+  } else {
+    charIndex++;
+    typedElement.textContent = currentPhrase.substring(0, charIndex);
+  }
+
+  // Determine delay for next step
+  let delay = typingSpeed;
+
+  if (!isDeleting && charIndex === currentPhrase.length) {
+    delay = 1500; // wait at the end of word
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length; // next phrase
+    delay = 500;
+  }
+
+  setTimeout(type, delay);
+}
+
+// Start typing effect
+type();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Set current year dynamically
 document.getElementById('year').textContent = new Date().getFullYear();

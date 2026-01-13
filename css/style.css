@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body{
@@ -11,6 +10,10 @@ body{
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #111827;
+    margin: 0 auto
 }
 
 section {
@@ -186,7 +189,7 @@ header nav ul li a:hover{
 
 
 
-/*------------------------------- HOME SECTION --------------------------*/
+/*---------------------------------------------------- HOME SECTION --------------------------------------------------------------*/
 .home-section {
     min-height: 60vh; /* full screen */
     display: flex;
@@ -197,7 +200,12 @@ header nav ul li a:hover{
     background-color: #111827;
     width: 100%;
     max-width: 100%;
-   
+
+    /* GIF background*/
+    background-image: url('/images/home.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .home-section .home-text img {
@@ -256,7 +264,7 @@ header nav ul li a:hover{
 }
 
 .home-text .name{
-    font-size: 3rem;
+    font-size: 5rem;
     color: #b24a86;
     font-weight:600;
     word-spacing: -0.2rem;
@@ -326,66 +334,29 @@ header nav ul li a:hover{
 }
 
 
-.about-btn {
-    margin-top: 4rem;
-    animation: fadeUp 0.8s ease forwards;
-    animation-delay: 0.45s;
-    opacity: 0
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 
-.about-btn .btn{
-    padding: 0.6rem 1.5rem;
-    font-weight: 595;
-    transition: all 0.3s ease;
-    color: #fffdd0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.typing-text {
+  font-weight: 300; /* corrected 'light' to numeric value */
+  font-size: 1rem;
+  color: #fff9b0;   /* pastel yellow */
+  margin: 1rem 0;
+  font-style: italic;
 }
 
-.about-btn .btn:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(178, 74, 134, 0.35);
-}
-
-.about-btn .btn-primary{
-    background-color: #b24a86;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-
-.home-socials {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem
-}
-
-.home-socials a {
+.cursor {
   display: inline-block;
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards;
+  background-color: #fff9b0;  /* match pastel yellow text */
+  width: 2px;
+  height: 1rem;
+  animation: blink 2s infinite;
+  margin-left: 2px;
+  transform: skewX(-15deg);   /* italic effect */
 }
 
-.home-socials a:nth-child(1) { animation-delay: 0.6s; }
-.home-socials a:nth-child(2) { animation-delay: 0.7s; }
-.home-socials a:nth-child(3) { animation-delay: 0.8s; }
-.home-socials a:nth-child(4) { animation-delay: 0.9s; }
-
-.home-socials img{
-    width: 25px;
-    height: 25px;
-    transition: transform 0.2s, filter 0.2s;
-}
-
-.home-socials img:hover{
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-.home-socials a:hover img {
-  transform: translateY(-4px) scale(1.05);
-}
 
 
 /*---------------------------------------- ABOUT ME ---------------------------------------*/
@@ -394,7 +365,7 @@ header nav ul li a:hover{
     padding: 3rem 4rem 6rem 4rem;
     width: 100%;
     margin: 0 auto;
-    background-color:#121a2e;
+    background-color:#111827;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
@@ -508,6 +479,66 @@ header nav ul li a:hover{
     }
 }
 
+.about-btn {
+    margin-top: 10rem;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.45s;
+    opacity: 0
+}
+
+.about-btn .btn{
+    padding: 0.6rem 1.5rem;
+    font-weight: 595;
+    transition: all 0.3s ease;
+    color: #fffdd0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-btn .btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(178, 74, 134, 0.35);
+}
+
+.about-btn .btn-primary{
+    background-color: #b24a86;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
+.home-socials {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem
+}
+
+.home-socials a {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.home-socials a:nth-child(1) { animation-delay: 0.6s; }
+.home-socials a:nth-child(2) { animation-delay: 0.7s; }
+.home-socials a:nth-child(3) { animation-delay: 0.8s; }
+.home-socials a:nth-child(4) { animation-delay: 0.9s; }
+
+.home-socials img{
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.home-socials img:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.home-socials a:hover img {
+  transform: translateY(-4px) scale(1.05);
+}
 
 /*----------------------------------------------------- WORK SECTION ------------------------------------------------------*/
 #work {
@@ -948,7 +979,6 @@ header nav ul li a:hover{
 #wavy-div {
     position: relative; /* needed for overlay */
     background-color: #b24a86;
-    color: #fffdd0;
     text-align: center;
     padding: 4rem 2rem 2rem; /* top padding for content below wave */
 }
@@ -976,8 +1006,7 @@ header nav ul li a:hover{
 }
 
 /* Footer Hero Section */
-footer {
-    color: #fffdd0;            /* text color */
+footer {      
     text-align: center;
     padding: 6rem 2rem 4rem;   /* top padding for wave separation */
     display: flex;
@@ -987,6 +1016,7 @@ footer {
 
 /* Main Name */
 .author {
+    color: #fffdd0;
     display: flex;
     flex-direction: column;
     align-items: center; /* center horizontally */
@@ -995,8 +1025,7 @@ footer {
 
 .author h1 {
     font-size: 3rem;       /* large prominent name */
-    margin: 0;              /* remove default spacing */
-    color:#fffdd0;        /* accent color */
+    margin: 0;              /* remove default spacing */ 
     line-height: 1;
     letter-spacing: 0.8rem;
 }
@@ -1004,7 +1033,6 @@ footer {
     display: block;         /* ensures it sits below h1 */
     font-size: 1.2rem;
     font-weight: 585;
-    color:#fffdd0;        /* softer text color */
     text-align: center;
     line-height: 1.4rem;
     margin-top: 0.2rem;     /* tiny gap under h1 */
