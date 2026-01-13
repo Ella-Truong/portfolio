@@ -11,9 +11,9 @@ toggle.addEventListener('click', () => {
 //typing text
 const phrases = [
   "cs student @ csulb",
-  "coffee lover ☕",
   "full-stack developer",
   "tech enthusiast 💻",
+  "coffee lover ☕",
 ];
 
 const typedElement = document.getElementById("typed");
