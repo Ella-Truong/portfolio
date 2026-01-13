@@ -190,6 +190,12 @@ header nav ul li a:hover{
 
 
 /*---------------------------------------------------- HOME SECTION --------------------------------------------------------------*/
+#home {
+    background-image: url('../images/home.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .home-section {
     min-height: 60vh; /* full screen */
     display: flex;
@@ -199,11 +205,6 @@ header nav ul li a:hover{
     text-align: center;
     width: 100%;
     max-width: 100%;
-
-    background-image: url('../images/home.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .home-section .home-text img {
