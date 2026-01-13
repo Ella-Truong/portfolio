@@ -197,11 +197,9 @@ header nav ul li a:hover{
     gap: 2.5rem;
     justify-content: center;
     text-align: center;
-    background-color: #111827;
     width: 100%;
     max-width: 100%;
 
-    /* GIF background*/
     background-image: url('/images/home.gif');
     background-size: cover;
     background-repeat: no-repeat;
