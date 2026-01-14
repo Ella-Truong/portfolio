@@ -513,9 +513,11 @@ header nav ul li a:hover{
 /*----------------------------------------------------- WORK SECTION ------------------------------------------------------*/
 #work {
     width: 100%;
-    height: 100vh;
+    min-height: 80vh;
     padding-top: 1.5rem ;
     padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     background:#121a2e;
     margin: 0 auto;
     display: flex;
