@@ -352,6 +352,7 @@ header nav ul li a:hover{
   width: 2px;
   height: 1rem;
   animation: blink 2s infinite;
+  vertical-align: middle;
   margin-left: 2px;
   transform: skewX(-15deg);   /* italic effect */
 }
