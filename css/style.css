@@ -197,7 +197,7 @@ header nav ul li a:hover{
     background-position: center;
 }
 .home-section {
-    min-height: 60vh; /* full screen */
+    min-height: 100vh; /* full screen */
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -207,29 +207,7 @@ header nav ul li a:hover{
     max-width: 100%;
 }
 
-.home-section .home-text img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-bottom: 3rem;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-
-@media (min-width: 769px) {
-    .home-section .home-text img {
-        animation: logoPulse 3s infinite;
-    }
-
-    /* Hover effect */
-    .home-section .home-text img:hover {
-        animation: none; /* stop default pulse */
-        transform: scale(1.15) rotate(10deg); /* slightly bigger and rotated */
-        box-shadow: 0 0 25px rgba(178, 74, 134, 0.8); /* stronger glow */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-}
 
 /* Keyframes for subtle pulse animation */
 @keyframes logoPulse {
@@ -306,14 +284,6 @@ header nav ul li a:hover{
         word-spacing: -0.1rem;
     }
 
-    .home-text .home-desc {
-        font-size: 1rem;
-        word-spacing: 0.05em;
-        padding: 0 2rem;      /* avoid touching edges */
-        max-width: 100%;
-        box-sizing: border-box;
-        line-height: 1.5;
-    }
 }
 
 @keyframes fadeUp {
