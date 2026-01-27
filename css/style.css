@@ -580,7 +580,7 @@ header nav ul li a:hover{
         grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
     .tech-grid .box{
-        width: 350px;
+        width: 280px;
     }
 }
 
