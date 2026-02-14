@@ -450,8 +450,9 @@ header nav ul li a:hover{
 }
 
 .let-talk{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .about-btn {
