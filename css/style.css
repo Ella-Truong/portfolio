@@ -449,6 +449,11 @@ header nav ul li a:hover{
     }
 }
 
+.let-talk{
+    align-items: center;
+    justify-content: center;
+}
+
 .about-btn {
     margin-top: 10rem;
     animation: fadeUp 0.8s ease forwards;
