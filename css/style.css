@@ -603,6 +603,7 @@ header nav ul li a:hover{
     font-family: 'Courier New', Courier, monospace;
     border-bottom: 1px solid;
     margin:0;
+    margin-bottom: 1rem;
 }
 
 .tech-grid div > div {
