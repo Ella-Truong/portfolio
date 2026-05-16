@@ -246,9 +246,34 @@ header nav ul li a:hover{
     word-spacing: -0.2rem;
     letter-spacing: 0.05rem;;
     text-align: center;
-    animation: fadeUp 0.8s ease forwards;
+    text-shadow:
+        0 0 8px rgba(178, 74, 134, 0.35),
+        0 0 18px rgba(178, 74, 134, 0.2);
+    animation: 
+        fadeUp 0.8s ease forwards,
+        glowPulse 3s ease-in-out infinite;
     animation-delay: 0.15s;
     opacity: 0;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow:
+            0 0 8px rgba(178, 74, 134, 0.35),
+            0 0 18px rgba(178, 74, 134, 0.2);
+    }
+
+    50% {
+        text-shadow:
+            0 0 14px rgba(178, 74, 134, 0.6),
+            0 0 28px rgba(178, 74, 134, 0.35);
+    }
+
+    100% {
+        text-shadow:
+            0 0 8px rgba(178, 74, 134, 0.35),
+            0 0 18px rgba(178, 74, 134, 0.2);
+    }
 }
 
 .home-text .home-desc {
