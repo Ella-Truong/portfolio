@@ -27,7 +27,7 @@ section {
 header {
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #111827 0%, #7a2f5d 60%, #b24a86 80%);
+    background: linear-gradient(135deg, #111827 0%, #7a2f5d 60%, #b24a86 100%);
     color: #fffdd0;
     z-index: 1000;
     box-shadow: 0 8px 20px rgba(178, 74, 134, 0.4), 0 2px 6px rgba(0,0,0,0.1);
