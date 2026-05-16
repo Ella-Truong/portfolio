@@ -550,7 +550,7 @@ header nav ul li a:hover{
 }
 
 .tech-grid .box{
-    height: auto;
+    min-height: 150px;
     padding: 2rem;
 }
 
