@@ -384,7 +384,7 @@ header nav ul li a:hover{
     width: 90%;
     height: 95%;
     padding: 1.5rem;
-    border-radius: 50px;
+    border-radius: 30px;
     background: #374151;
     box-shadow: 0 4px 12px #374151, 0 1px 3px rgba(0,0,0,0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -568,8 +568,7 @@ header nav ul li a:hover{
     text-align: center;
     box-shadow: 0, 0.4rem 1rem rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #fffdd0;
-    border-radius: 1rem;
+    border: 0.5px solid #fffdd0;
     overflow: hidden;
     background: #374151;
 }
