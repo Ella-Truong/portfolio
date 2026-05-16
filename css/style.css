@@ -97,7 +97,7 @@ header nav {
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 7rem;
+    gap: clamp(1.5rem, 4vw, 4rem);
     margin: 0;
     padding: 0;
     align-items: center;
