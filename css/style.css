@@ -404,7 +404,7 @@ header nav ul li a:hover{
     background: #374151;
 }
 
-.box:hover {
+.about-content .box:hover {
     background: transparent;
     border: 0.5px solid #fffdd0;
     transform: translateY(-6px);
@@ -863,12 +863,8 @@ header nav ul li a:hover{
     background:#4b5563;
     backdrop-filter: blur(10px);
     border-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.email-contact:hover {
-    transform: translateY(-5px);
-}
 
 .email-contact img{
     width: 25px;
@@ -894,11 +890,6 @@ header nav ul li a:hover{
     padding: 2rem;
     background:#4b5563;
     border-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.message-contact:hover {
-    transform: translateY(-5px);
 }
 
 .message-contact form {
@@ -923,11 +914,6 @@ header nav ul li a:hover{
 .message-contact input::placeholder,
 .message-contact textarea::placeholder {
     color: rgba(255,253,208,0.6);
-}
-
-.message-contact input:focus,
-.message-contact textarea:focus {
-    background: rgba(244,114,182,0.2);
 }
 
 .message-contact .btn {
