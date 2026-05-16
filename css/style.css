@@ -618,9 +618,11 @@ header nav ul li a:hover{
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px 10px */
 }
 
-.front-end .tech-images img:nth-child(-n+3) {
-    flex: 0 0 calc(33.33% - 1rem);
-    max-width: 5rem;
+.tech-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .tech-images img {
