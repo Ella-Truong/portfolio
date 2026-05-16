@@ -626,7 +626,7 @@ header nav ul li a:hover{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 .tech-images img {
