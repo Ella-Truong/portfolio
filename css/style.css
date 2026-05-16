@@ -549,13 +549,6 @@ header nav ul li a:hover{
     color: #b24a86;
 }
 
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    padding-bottom: 4rem;
-}
-
 .tech-grid .box{
     padding: 0;
 }
@@ -578,20 +571,22 @@ header nav ul li a:hover{
     box-shadow: 0 0.75rem 1.6rem rgba(0, 0, 0, 0.15)
 }
 
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 @media (max-width: 900px) {
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    }
-    .tech-grid .box{
-        width: 280px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .tech-grid {
-        grid-template-columns: 1fr; /* stack in 1 column on small screens */
+        grid-template-columns: 1fr;
     }
-    
 }
 
 
