@@ -247,32 +247,23 @@ header nav ul li a:hover{
     letter-spacing: 0.05rem;;
     text-align: center;
     text-shadow:
-        0 0 8px rgba(178, 74, 134, 0.35),
-        0 0 18px rgba(178, 74, 134, 0.2);
-    animation: 
+        0 0 6px rgba(255, 255, 255, 0.08);
+    animation:
         fadeUp 0.8s ease forwards,
-        glowPulse 3s ease-in-out infinite;
+        softGlow 4s ease-in-out infinite 0.8s;
     animation-delay: 0.15s;
     opacity: 0;
 }
 
-@keyframes glowPulse {
-    0% {
+@keyframes softGlow {
+    0%, 100% {
         text-shadow:
-            0 0 8px rgba(178, 74, 134, 0.35),
-            0 0 18px rgba(178, 74, 134, 0.2);
+            0 0 6px rgba(255, 255, 255, 0.08);
     }
 
     50% {
         text-shadow:
-            0 0 14px rgba(178, 74, 134, 0.6),
-            0 0 28px rgba(178, 74, 134, 0.35);
-    }
-
-    100% {
-        text-shadow:
-            0 0 8px rgba(178, 74, 134, 0.35),
-            0 0 18px rgba(178, 74, 134, 0.2);
+            0 0 12px rgba(255, 255, 255, 0.18);
     }
 }
 
