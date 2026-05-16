@@ -639,8 +639,8 @@ header nav ul li a:hover{
 }
 
 .tech-images img {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     object-fit: contain;
 }
 
