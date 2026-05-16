@@ -551,7 +551,8 @@ header nav ul li a:hover{
 
 .tech-grid .box{
     min-height: 150px;
-    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
 
 .tech-grid > div {
