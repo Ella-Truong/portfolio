@@ -382,75 +382,150 @@ header nav ul li a:hover{
 
 /* BOX GRID */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* exactly two boxes */
-    gap: 0.5rem;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+}
+
+/* image section */
+.about-image {
+    position: relative;
+
+    width: 320px;
+    height: 420px;
+
+    flex-shrink: 0;
+}
+
+/* pink rectangle behind */
+.image-bg {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #b24a86
+    );
+
+    border-radius: 24px;
+
+    transform: rotate(-6deg);
+
+    transition: 0.4s ease;
+}
+
+/* main profile image */
+.profile-img {
+    position: relative;
+
     width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    transform: rotate(4deg);
+
+    transition: 0.4s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* hover effect */
+.about-image:hover .image-bg,
+.about-image:hover .profile-img {
+    transform: rotate(0deg);
+}
+
+/* right section */
+.about-right {
+    flex: 1;
+}
+
+/* description */
+.about-description p {
+    color: #d1d5db;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #f9a8d4;
+    font-weight: 600;
 }
 
 /* BOX STYLE */
-.about-content .box {
+/* bottom boxes */
+.about-boxes {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* center content horizontally */
-    text-align: center;
-    width: 90%;
-    height: 95%;
-    padding: 1.5rem;
-    border-radius: 20px;
-    background: #374151;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.about-content .box:hover {
+/* box styling */
+.about-boxes .box {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 0.8rem 1rem;
+    max-width: 260px;
+}
+
+.about-boxes .box:hover {
     background: transparent;
-    border: 0.5px solid #fffdd0;
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+    border-color: rgba(236, 72, 153, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25),
+        0 0 20px rgba(236, 72, 153, 0.08);
 }
 
-.box h3 {
+/* section title inside box */
+.about-boxes h3 {
     display: flex;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #b24a86;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.4rem;
-    color: #b24a86;
-    margin-bottom: 1rem;
+    justify-content: center;
 }
-
+/* icons */
 .edu-icon,
 .skill-icon {
-    width: 26px;
-    height: 26px;
+    width: 1rem;
 }
 
-.box ul {
-    list-style-type: none;
-    padding-bottom: 0.8rem;
+/* list styling */
+.colored-bullets {
+    padding-left: 1.2rem;
 }
 
-.box li {
-    margin-bottom: 1rem;
-    color: #fffdd0;
-    font-weight: 595;
-    line-height: 1.2;
-    font-size: 0.95rem;
+/* content */
+.colored-bullets li {
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+    font-size: 0.85rem;
 }
 
-.box li h4 {
-    font-size: 1rem;
-    color: #fffdd0;
-    font-weight: 595;
+.colored-bullets h4 {
+    font-size: 0.85rem;
+    color: #fff9b0;
 }
 
-.box li p,
-.box li span {
-    font-size: 0.8rem;
-    color: #eceff1;
-    font-weight: 570;
+.colored-bullets p,
+.colored-bullets span {
+    font-size: 0.75rem;
+    color: #d1d5db;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -463,72 +538,42 @@ header nav ul li a:hover{
     }
 }
 
-.let-talk{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.let-talk {
+    margin-top: 1.5rem;
 }
 
 .about-btn {
-    margin-top: 10rem;
     animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.45s;
-    opacity: 0
+    opacity: 0;
 }
 
-.about-btn .btn{
-    padding: 0.6rem 1.5rem;
-    font-weight: 595;
-    transition: all 0.3s ease;
+.about-btn .btn {
+    display: inline-block;
+
+    padding: 0.9rem 1.2rem;
+
+    background: #b24a86;
     color: #fffdd0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.about-btn .btn:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(178, 74, 134, 0.35);
-}
-
-.about-btn .btn-primary{
-    background-color: #b24a86;
     text-decoration: none;
     border-radius: 10px;
+
+    border: 1px solid transparent;
+
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
-
-.home-socials {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem
+.about-btn .btn:hover {
+    background: transparent;
+    border-color: rgba(236, 72, 153, 0.5);
 }
 
-.home-socials a {
-  display: inline-block;
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.home-socials a:nth-child(1) { animation-delay: 0.6s; }
-.home-socials a:nth-child(2) { animation-delay: 0.7s; }
-.home-socials a:nth-child(3) { animation-delay: 0.8s; }
-.home-socials a:nth-child(4) { animation-delay: 0.9s; }
-
-.home-socials img{
-    width: 25px;
-    height: 25px;
-    transition: transform 0.2s, filter 0.2s;
-}
-
-.home-socials img:hover{
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-.home-socials a:hover img {
-  transform: translateY(-4px) scale(1.05);
-}
 
 /*----------------------------------------------------- WORK SECTION ------------------------------------------------------*/
 #work {
