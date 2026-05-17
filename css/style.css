@@ -462,7 +462,7 @@ header nav ul li a:hover{
 .about-boxes {
     display: flex;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -613,6 +613,7 @@ header nav ul li a:hover{
 .tech-grid .box{
     min-height: 150px;
     padding: 0;
+    border-radius: 5px;
 }
 
 .tech-grid > div {
@@ -654,7 +655,7 @@ header nav ul li a:hover{
 
 .tech-grid h3 {
     color: #111827;
-    background: #fffdd0;
+    background: #d1d5db;
     padding: 0.25rem 1rem;
     height: 2.5rem;
     display: block;
@@ -696,6 +697,168 @@ header nav ul li a:hover{
     object-fit: contain;
 }
 
+/*--------------------------------------------------------- EXPERIENCE -------------------------------------------------------*/
+#journey {
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 1.5rem ;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background:#121a2e;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* container */
+.journey-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    margin: 3rem auto 0;
+    max-width: 550px;
+}
+
+/* experience card */
+.journey-card {
+    background: #374151;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(14px);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* hover */
+.journey-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(236, 72, 153, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25),
+        0 0 20px rgba(236, 72, 153, 0.08);
+}
+
+/* top section */
+.journey-top {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+/* logo */
+.company-logo {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* company name */
+.journey-info h3 {
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 0.3rem;
+}
+
+/* position + date */
+.position-date {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    color: #9ca3af;
+
+    font-size: 0.95rem;
+}
+
+.position-date h4 {
+    color: #f9a8d4;
+
+    font-weight: 500;
+}
+
+
+/* logo */
+.company-logo {
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+}
+
+/* text info */
+.journey-info h3 {
+    color: #fff;
+
+    margin-bottom: 0.25rem;
+
+    font-size: 1.1rem;
+}
+
+.journey-info h4 {
+    color: #f9a8d4;
+
+    font-weight: 500;
+
+    margin-bottom: 0.25rem;
+}
+
+.journey-info span {
+    color: #9ca3af;
+
+    font-size: 0.9rem;
+}
+
+/* bullet points */
+.journey-points {
+    margin-top: 1.2rem;
+
+    padding-left: 1.2rem;
+}
+
+.journey-points li {
+    color: #d1d5db;
+
+    margin-bottom: 0.8rem;
+
+    line-height: 1.7;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+
+    .journey-card {
+        padding: 1.2rem;
+    }
+
+    .journey-top {
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        width: 52px;
+        height: 52px;
+    }
+}
 /*--------------------------------------------------------- PROJECT SECTION ----------------------------------------------------*/
 #projects {
     padding: 3rem;
