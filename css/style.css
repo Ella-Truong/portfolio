@@ -190,17 +190,19 @@ header nav ul li a:hover{
 
 /*---------------------------------------------------- HOME SECTION --------------------------------------------------------------*/
 #home {
-    background-image: url('../images/home.gif');
+    background-image: url('../images/home11.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .home-section {
     min-height: 100vh; /* full screen */
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 7rem;
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -224,10 +226,10 @@ header nav ul li a:hover{
     }
 }
 
-
 .home-text .hello{
     font-size: 2rem;
     color: #fffdd0;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
     line-height: 0.5rem;
@@ -236,12 +238,12 @@ header nav ul li a:hover{
 }
 
 .home-text .hello span{
-    color: #b24a86;
+    color: #fffdd0;
 }
 
 .home-text .name{
     font-size: 5rem;
-    color: #b24a86;
+    color: #fffdd0;
     font-weight:600;
     word-spacing: -0.2rem;
     letter-spacing: 0.05rem;;
@@ -383,17 +385,15 @@ header nav ul li a:hover{
 /* BOX GRID */
 .about-content {
     display: flex;
-    gap: 6rem;
+    gap: 6.5rem;
     align-items: flex-start;
 }
 
 /* image section */
 .about-image {
     position: relative;
-
-    width: 320px;
-    height: 420px;
-
+    width: 380px;
+    height: 400px;
     flex-shrink: 0;
 }
 
@@ -401,17 +401,12 @@ header nav ul li a:hover{
 .image-bg {
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         135deg,
-        #ec4899,
-        #b24a86
+    #d1d5db,
+    #9ca3af
     );
-
     border-radius: 24px;
-
-    transform: rotate(-6deg);
-
     transition: 0.4s ease;
 }
 
@@ -426,7 +421,7 @@ header nav ul li a:hover{
 
     border-radius: 24px;
 
-    transform: rotate(4deg);
+    transform: rotate(8.5deg);
 
     transition: 0.4s ease;
 
@@ -480,7 +475,7 @@ header nav ul li a:hover{
     background: transparent;
     transform: translateY(-6px);
 
-    border-color: rgba(236, 72, 153, 0.35);
+    border-color: #d1d5db;
 
     box-shadow:
         0 10px 25px rgba(0,0,0,0.25),
@@ -527,14 +522,69 @@ header nav ul li a:hover{
 }
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* tablet */
+@media (max-width: 900px) {
+
     .about-content {
-        grid-template-columns: 1fr; /* stack boxes vertically */
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 3rem;
     }
 
-    .box {
-        max-width: 90%;
+    .about-right {
+        width: 100%;
+    }
+
+    .about-description {
+        text-align: center;
+    }
+
+    .about-boxes {
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 1.5rem;
+    }
+
+    .let-talk {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+
+    .about-image {
+        width: 240px;
+        height: 320px;
+    }
+
+    .about-description p {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+    .about-boxes {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .about-boxes .box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .about-btn .btn {
+        width: 100%;
+
+        text-align: center;
     }
 }
 
@@ -550,19 +600,13 @@ header nav ul li a:hover{
 
 .about-btn .btn {
     display: inline-block;
-
     padding: 0.9rem 1.2rem;
-
     background: #b24a86;
     color: #fffdd0;
-
+    font-weight: 600;
     text-decoration: none;
     border-radius: 10px;
-
     border: 1px solid transparent;
-
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-
     transition:
         transform 0.3s ease,
         background 0.3s ease,
@@ -570,8 +614,10 @@ header nav ul li a:hover{
 }
 
 .about-btn .btn:hover {
-    background: transparent;
-    border-color: rgba(236, 72, 153, 0.5);
+    background: #d1d5db;
+    color: #374151;
+    font-weight: 600;
+    border-color: #d1d5db;
 }
 
 
@@ -610,9 +656,10 @@ header nav ul li a:hover{
 }
 
 .tech-grid .box{
-    min-height: 150px;
     padding: 0;
     border-radius: 5px;
+    width: 320px;
+    height: 180px;
 }
 
 .tech-grid > div {
@@ -634,23 +681,42 @@ header nav ul li a:hover{
 }
 
 .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     gap: 2rem;
+
+    max-width: 920px;
+
+    margin: 0 auto;
+}
+
+/* second row centered */
+.languages {
+    grid-column: 1 / 2;
+}
+
+.tools {
+    grid-column: 3 / 4;
 }
 
 @media (max-width: 900px) {
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
     }
+
 }
 
 @media (max-width: 600px) {
     .tech-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
 }
-
 
 .tech-grid h3 {
     color: #111827;
@@ -710,6 +776,10 @@ header nav ul li a:hover{
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
+#journey .tech-header{
+    margin-bottom: 0.5rem;
+}
+
 /* container */
 .journey-container {
     display: flex;
@@ -740,7 +810,7 @@ header nav ul li a:hover{
 /* hover */
 .journey-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(236, 72, 153, 0.35);
+    border-color: #d1d5db;
     box-shadow:
         0 10px 25px rgba(0,0,0,0.25),
         0 0 20px rgba(236, 72, 153, 0.08);
@@ -1223,15 +1293,15 @@ footer .footer-copyright {
 .side-bar {
     position: fixed;
     top: 50%;
-    left: 5px;
+    left: 12px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
 
     background: rgba(178, 74, 134, 0.25);
-    padding: 7px;
+    padding: 12px;
     gap: 20px;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 
     opacity: 0;
